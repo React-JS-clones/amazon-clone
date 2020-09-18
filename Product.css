@@ -12,6 +12,7 @@
     z-index: 1;
 }
 
+
 .product__rating{
     display: flex;
     align-content: center;
@@ -38,7 +39,7 @@
 .product__info{
     height: 100px;
     margin-bottom: 15px; 
-    text-align: center;
+    /* text-align: center; */
        
 }
 
