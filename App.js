@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, {useEffect } from 'react';
 // import logo from './logo.svg';
 import './App.css';
 import Header from './Header';
@@ -11,8 +11,10 @@ import { auth } from './firebase';
 import { useStateValue } from './StateProvider';
 
 
+
 function App() {
   const [{}, dispatch] = useStateValue();
+  
 
   useEffect(() => {
     // will only run once when the app component loads....
@@ -36,8 +38,8 @@ function App() {
 
 
   return (
-    <Router>
-      <div className="app">
+    <Router >
+      <div  className="app" >
         
         <Switch>
         <Route path="/login" >             
@@ -47,9 +49,9 @@ function App() {
             <Header />
             <Checkout />
           </Route>
-          <Route path="/" >
+          <Route path="/"  >
             <Header />
-            <Home />
+            <Home  />
           </Route>
         </Switch>
       </div>

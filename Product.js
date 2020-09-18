@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Product.css';
 import { useStateValue } from './StateProvider';
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 function Product({ id, title, image, price, rating }) {
+    useEffect(() => {
+        Aos.init({duration:1000});
+    }, [] );
     const [{basket}, dispatch] = useStateValue();
     
     const addToBasket = () => {
@@ -19,8 +24,10 @@ function Product({ id, title, image, price, rating }) {
     };
 
     return (
-        <div className='product'>
-           
+        
+        <div data-aos="fade-up"
+         className='product'>
+            
             <img src={image} alt=""  />
             
             <div className='product__info'>

@@ -1,35 +1,24 @@
-import React from 'react';
+
+import React,{useRef ,useEffect } from 'react';
 import './Home.css';
 import Product from './Product';
-// import './Slider.scss';
+import Slider from './Slider'
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+
+
 
 function Home() {
-
-    let sliderArr = [1, 2, 3, 4, 5]
-
+    
+    
     return (
         <div className='home'>
-            <div className='home__container'>
-                {/* <div className='slider' >
-                    {
-                        sliderArr.map((item, index) => {
-                            return (
-                                <div key={index} className='slide'  >
-                                    {item}
-                                </div>
-                            )
-                        })
-                    }
-                    <button id="goLeft" >left</button>
-                    <button id="goRight" >right</button>
-                </div> */}
-                <img 
-                    className='home__image' 
-                    src="https://images-na.ssl-images-amazon.com/images/G/15/digital/video/merch/2020/Other/BRND_MTH20_00000_GWBleedingHero_1500x600_Final_en-CA_FT_PVD5388._CB406163142_.jpg" 
-                    alt="amitabh" 
-                />
+            <div  className='home__container'>
+                <Slider />
 
-                <div className='home__row'>
+
+                <div  className='home__row'>
                     <Product
                         id='1'
                         title='Airpode: Wireless Earbuds Bluetooth 5.0 Headphones HD Stereo Noise Reduction in-Ear Earbuds Sports Ear Bud with Wireless Charging Case Auto Pairing for Earphones Apple Airpods/iPhone/Android'
@@ -47,7 +36,7 @@ function Home() {
                     />
                 </div>
 
-                <div className='home__row'>
+                <div  className='home__row'>
                     <Product
                         id='3'
                         title='Chair: AmazonBasics Upholstered, Low-Back, Adjustable, Swivel Office Desk Chair, Black'
