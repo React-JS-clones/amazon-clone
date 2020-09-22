@@ -33,13 +33,14 @@ function Header() {
                 <div onClick={handleAuthentication} 
                      className='header__option'>
                     <span className='header__optionLineOne'>
-                        Hello {user?.email}
+                        Hello {!user? 'Guest' : user.email }
                     </span>
                     <span className='header__optionLineTwo'>
                         {user ? 'Sign Out': 'Sign In' }
                     </span>
                 </div>
                 </Link>
+                <Link to='/orders' >
                 <div className='header__option'>
                     <span className='header__optionLineOne'>
                         Returns
@@ -48,6 +49,7 @@ function Header() {
                         & Orders
                     </span>
                 </div>
+                </Link>
                 <div className='header__option'>
                     <span className='header__optionLineOne'>
                         Your
